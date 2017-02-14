@@ -6,4 +6,9 @@ public class FSMAppUtil {
 			return true;
 		return false;
 	}
+	public static boolean hasNoMoney(float fare){
+		if(fare == 0.0)
+			return true;
+		return false;
+	}
 }
