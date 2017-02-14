@@ -17,6 +17,11 @@ public class VehicleServiceImpl implements VehicleService {
 	public Long save(Vehicle vehicle){
 		return (Long) vehicleDao.save(vehicle);
 	}
+	
+	@Override
+	public Vehicle findBy(Long id){
+		return (Vehicle) vehicleDao.find(new Vehicle().getClass(), id);
+	}
 
 	public void setVehicleDao(VehicleDao vehicleDao){
 		this.vehicleDao = vehicleDao;

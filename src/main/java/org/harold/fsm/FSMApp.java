@@ -44,8 +44,13 @@ public class FSMApp {
 			case WAITING_TO_PAY:{
 				log.info("Waiting to Pay.");
 				saveCommute(createCommute(vehicle, passenger, "WAITING_TO_PAY"));
-				log.info("Passenger pass the money.");
-				state = State.WAITING_FOR_CHANGE.getState();
+				if(FSMAppUtil.hasNoMoney(fare)){
+					log.info("Passenger has no money.");
+					state = State.WAITING_TO_STOP.getState();
+				}else{
+					log.info("Passenger pass the money.");
+					state = State.WAITING_FOR_CHANGE.getState();
+				}
 				break;
 			}
 			case WAITING_FOR_CHANGE:{

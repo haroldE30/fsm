@@ -4,4 +4,5 @@ import org.harold.fsm.model.Vehicle;
 
 public interface VehicleService {
 	Long save(Vehicle vehicle);
+	Vehicle findBy(Long id);
 }

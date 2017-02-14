@@ -47,6 +47,16 @@ public class FSMAppTest extends TestCase {
 		log.info("Passenger will now commute from " + vehicle1.getRoute());
 		app.commute(vehicle1, passenger, 8.0f);
 	}
+	
+	public void testPassenger3() throws Exception{
+		Passenger passenger = createPassenger();
+		Vehicle vehicle = vehicleService.findBy(1L);
+		
+		FSMApp app = new FSMApp();
+		log.info("\n\nStarting app...");
+		log.info("Passenger will now commute from " + vehicle.getRoute());
+		app.commute(vehicle, passenger, 0.0f);
+	}
 
 	private Passenger createPassenger() throws Exception{
 		log.info("Creating passenger record...");
