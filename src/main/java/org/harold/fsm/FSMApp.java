@@ -100,13 +100,13 @@ public class FSMApp {
 		try{
 			log.info("Saving passenger " + commute.getPassengerId() + 
 					" using vehicle " + commute.getVehicleId() +
-					" when " + commute.getState());
+					" state " + commute.getState());
 			commuteService.persist(commute);
 		}catch(Exception e){
 			log.error("Problem saving commute for passenger " 
 					+ commute.getPassengerId() + 
 					" using vehicle " + commute.getVehicleId() +
-					" when " + commute.getState());
+					" state " + commute.getState() + " : " + e.getMessage());
 		}
 	}
 	
