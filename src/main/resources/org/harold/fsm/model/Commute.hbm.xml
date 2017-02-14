@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+	
+<hibernate-mapping package="org.harold.fsm.model">
+	<class name="Commute" table="commute">
+		<id name="id">
+			<generator class="native"/>
+		</id>
+		<property name="vehicleId" type="long"/>
+		<property name="passengerId" type="long"/>
+		<property name="state" type="string"/>
+	</class>
+</hibernate-mapping>
