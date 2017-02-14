@@ -9,4 +9,4 @@ To run:
 3. Change directory to fsm/
 4. type: mvn install
    (this will download all jar files needed for the application and will run the test cases included)
-5. log will display on the console or you can open the file log/FSMApp.log
+5. log will display on the console or you can open the file under log/FSMApp.log
